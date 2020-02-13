@@ -1,0 +1,12 @@
+《动手学深度学习》
+《动手学深度学习》说明 https://mp.weixin.qq.com/s/giyC8uVdPnr_zwTdrPkG8w
+官网：http://zh.d2l.ai/index.html
+教程：https://courses.d2l.ai/berkeley-stat-157/index.html
+github：https://github.com/d2l-ai/d2l-zh
+中文视频：https://space.bilibili.com/209599371
+TensorFlow2.0版本:
+网页版：https://trickygo.github.io/Dive-into-DL-TensorFlow2.0
+github：https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0
+
+
+
