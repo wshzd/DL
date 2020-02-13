@@ -1,5 +1,6 @@
 《动手学深度学习》
 《动手学深度学习》说明 https://mp.weixin.qq.com/s/giyC8uVdPnr_zwTdrPkG8w
+MXNet版本:
 官网：http://zh.d2l.ai/index.html
 教程：https://courses.d2l.ai/berkeley-stat-157/index.html
 github：https://github.com/d2l-ai/d2l-zh
@@ -7,6 +8,7 @@ github：https://github.com/d2l-ai/d2l-zh
 TensorFlow2.0版本:
 网页版：https://trickygo.github.io/Dive-into-DL-TensorFlow2.0
 github：https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0
-
-
+PyTorch版本:
+网页版：http://tangshusen.me/Dive-into-DL-PyTorch/
+github：https://github.com/ShusenTang/Dive-into-DL-PyTorch
 
