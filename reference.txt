@@ -15,8 +15,8 @@ github：https://github.com/ShusenTang/Dive-into-DL-PyTorch
 58通用深度学习推理服务dl_inference开源项目
 https://github.com/wuba/dl_inference
 
-
-
+Yann Lecun纽约大学《深度学习》2020课程笔记中文版
+https://atcold.github.io/pytorch-Deep-Learning/zh/
 
 
 
