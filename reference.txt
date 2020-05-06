@@ -12,3 +12,12 @@ PyTorch版本:
 网页版：http://tangshusen.me/Dive-into-DL-PyTorch/
 github：https://github.com/ShusenTang/Dive-into-DL-PyTorch
 
+58通用深度学习推理服务dl_inference开源项目
+https://github.com/wuba/dl_inference
+
+
+
+
+
+
+
