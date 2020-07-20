@@ -18,6 +18,8 @@ https://github.com/wuba/dl_inference
 Yann Lecun纽约大学《深度学习》2020课程笔记中文版
 https://atcold.github.io/pytorch-Deep-Learning/zh/
 
-
-
+复旦邱锡鹏《神经网络与深度学习》
+https://nndl.github.io/
+书籍下载https://nndl.github.io/nndl-book.pdf
+课后练习https://github.com/nndl/exercise
 
