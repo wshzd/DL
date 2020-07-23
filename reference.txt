@@ -23,3 +23,10 @@ https://nndl.github.io/
 书籍下载https://nndl.github.io/nndl-book.pdf
 课后练习https://github.com/nndl/exercise
 
+机器学习和深度学习可视化
+https://github.com/dair-ai/ml-visuals
+
+
+
+
+
