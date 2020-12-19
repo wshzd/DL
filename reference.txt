@@ -26,7 +26,7 @@ https://nndl.github.io/
 机器学习和深度学习可视化
 https://github.com/dair-ai/ml-visuals
 
-
-
+《深度学习之模型设计》
+https://github.com/longpeng2008/yousan.ai/
 
 
