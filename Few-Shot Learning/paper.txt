@@ -2,8 +2,10 @@
 论文地址：https://arxiv.org/pdf/1904.05046.pdf
 GitHub 地址：https://github.com/tata1661/FewShotPapers
 
+《Generalizing from a Few Examples: A Survey on Few-Shot Learning》论文解读
+https://www.cnblogs.com/jiangxinyang/p/12163215.html
 
-
-
+小样本学习（few-shot learning）在文本分类中的应用
+https://www.cnblogs.com/jiangxinyang/p/11346764.html
 
 
