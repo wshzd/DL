@@ -31,6 +31,16 @@ https://github.com/longpeng2008/yousan.ai/
 
 《Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN》-IndRNN新型RNN（解决梯度消失的另一种解决思路）
 https://github.com/batzner/indrnn
+调用方法https://www.sohu.com/a/225900092_129720：
+将 ind_rnn_cell.py 文件复制到你的项目目录中，如下展示了 IndRNN 单元的简单调用过程：
+
+fromind_rnn_cell importIndRNNCell
+# Regulate each neuron's recurrent weight as recommended in the paper
+recurrent_max = pow( 2, 1/ TIME_STEPS)
+cell = MultiRNNCell([IndRNNCell( 128, recurrent_max_abs=recurrent_max),
+IndRNNCell( 128, recurrent_max_abs=recurrent_max)])
+output, state = tf.nn.dynamic_rnn(cell, input_data, dtype=tf.float32)
+
 
 
 
