@@ -29,4 +29,12 @@ https://github.com/dair-ai/ml-visuals
 《深度学习之模型设计》
 https://github.com/longpeng2008/yousan.ai/
 
+《Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN》-IndRNN新型RNN（解决梯度消失的另一种解决思路）
+https://github.com/batzner/indrnn
+
+
+
+
+
+
 
