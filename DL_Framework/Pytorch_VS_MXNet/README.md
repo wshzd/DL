@@ -100,20 +100,74 @@ net.initialize()
 >需要创建一个 name_scope 的域来给每一层附上一个独一无二的名字，这个在之后读写模型时需要我们需要显示调用模型初始化函数。
 
 >大家知道 Sequential 下只能神经网络只能逐一执行每个层。PyTorch可以继承 nn.Module 来自定义 forward 如何执行。同样，MXNet 可以继承 nn.Block 来达到类似的效果。
+### 损失函数和优化算法
+#### PyTorch
+```
+loss_fn = nn.CrossEntropyLoss()
+trainer = torch.optim.SGD(net.parameters(), lr=0.1)
+```
+#### MXNet
+```
+loss_fn = gluon.loss.SoftmaxCrossEntropyLoss()
+trainer = gluon.Trainer(net.collect_params(),
+                      'sgd', {'learning_rate': 0.1})
+```
+这里我们使用交叉熵函数和最简单随机梯度下降并使用固定学习率 0.1
+## 训练
+最后我们实现训练算法，并附上了输出结果。注意到每次我们会使用不同的权重和数据读取顺序，所以每次结果可能不一样。
+#### PyTorch
+```
+from time import time
+for epoch in range(5):
+  total_loss = .0
+  tic = time()
+  for X, y in train_data:
+      X, y = torch.autograd.Variable(X), torch.autograd.Variable(y)
+      trainer.zero_grad()
+      loss = loss_fn(net(X.view(-1, 28*28)), y)
+      loss.backward()
+      trainer.step()
+      total_loss += loss.mean()
+  print('epoch %d, avg loss %.4f, time %.2f' % (
+      epoch, total_loss/len(train_data), time()-tic))
+```
+```
+epoch 0, avg loss 0.3251, time 3.71
+epoch 1, avg loss 0.1509, time 4.05
+epoch 2, avg loss 0.1057, time 4.07
+epoch 3, avg loss 0.0820, time 3.70
+epoch 4, avg loss 0.0666, time 3.63
+```
+#### MXNet
+```
+from time import time
+for epoch in range(5):
+  total_loss = .0
+  tic = time()
+  for X, y in train_data:
+      with mx.autograd.record():
+        loss = loss_fn(net(X.flatten()), y)
+      loss.backward()
+      trainer.step(batch_size=128)
+      total_loss += loss.mean().asscalar()
+  print('epoch %d, avg loss %.4f, time %.2f' % (
+      epoch, total_loss/len(train_data), time()-tic))
+```
+```
+epoch 0, avg loss 0.3162, time 1.59
+epoch 1, avg loss 0.1503, time 1.49
+epoch 2, avg loss 0.1073, time 1.46
+epoch 3, avg loss 0.0830, time 1.48
+epoch 4, avg loss 0.0674, time 1.75
+```
+MXNet 跟 PyTorch 的不同主要在下面这几点：
 
+不需要将输入放进 Variable， 但需要将计算放在 mx.autograd.record() 里使得后面可以对其求导
 
+不需要每次梯度清 0，因为新梯度是写进去，而不是累加
 
+step 的时候 MXNet 需要给定批量大小
 
+需要调用 asscalar() 来将多维数组变成标量。
 
-
-
-
-
-
-
-
-
-
-
-
-
+这个样例里 MXNet 比 PyTorch 快两倍。当然大家对待这样的比较要谨慎。
