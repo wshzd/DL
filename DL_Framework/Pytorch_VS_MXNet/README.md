@@ -2,7 +2,7 @@
 ## Pytorch
 PyTorch 默认使用 conda 来进行安装，例如
 
-conda install pytorch-cpu -c pytorch
+```conda install pytorch-cpu -c pytorch
 ## MXNet
 MXNet 更常用的是使用 pip。我们这里使用了 --pre 来安装 nightly 版本
 
