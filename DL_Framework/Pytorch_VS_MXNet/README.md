@@ -15,7 +15,14 @@ x = torch.ones(5,3)
 y = x + 1
 print(y)
 ```
-
+```
+2  2  2
+2  2  2
+2  2  2
+2  2  2
+2  2  2
+[torch.FloatTensor of size 5x3]
+```
 
 
 
