@@ -92,11 +92,10 @@ with net.name_scope():
 net.initialize()
 ```
 我们使用了 Sequential 容器来把层串起来构造神经网络。这里MXNet跟PyTorch的主要区别是：
-  不需要指定输入大小，这个系统会在后面自动推理得到
-  全连接和卷积层可以指定激活函数
-   需要创建一个 name_scope 的域来给每一层附上一个独一无二的名字，这个在之后读写模型时需要
-  我们需要显示调用模型初始化函数。
-  大家知道 Sequential 下只能神经网络只能逐一执行每个层。PyTorch可以继承 nn.Module 来自定义 forward 如何执行。同样，MXNet 可以继承 nn.Block 来达到类似的效果。
+    不需要指定输入大小，这个系统会在后面自动推理得到
+    全连接和卷积层可以指定激活函数
+    需要创建一个 name_scope 的域来给每一层附上一个独一无二的名字，这个在之后读写模型时需要我们需要显示调用模型初始化函数。
+    大家知道 Sequential 下只能神经网络只能逐一执行每个层。PyTorch可以继承 nn.Module 来自定义 forward 如何执行。同样，MXNet 可以继承 nn.Block 来达到类似的效果。
 
 
 
