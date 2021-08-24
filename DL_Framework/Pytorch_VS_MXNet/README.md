@@ -12,8 +12,8 @@ MXNet 更常用的是使用 pip。我们这里使用了 --pre 来安装 nightly 
 ```import torch
 x = torch.ones(5,3)
 y = x + 1
-```print(y)
-
+print(y)
+```
 
 
 
