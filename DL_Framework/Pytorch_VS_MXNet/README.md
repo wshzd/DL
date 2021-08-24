@@ -162,12 +162,12 @@ epoch 4, avg loss 0.0674, time 1.75
 ```
 MXNet 跟 PyTorch 的不同主要在下面这几点：
 
-不需要将输入放进 Variable， 但需要将计算放在 mx.autograd.record() 里使得后面可以对其求导
+>不需要将输入放进 Variable， 但需要将计算放在 mx.autograd.record() 里使得后面可以对其求导
 
-不需要每次梯度清 0，因为新梯度是写进去，而不是累加
+>不需要每次梯度清 0，因为新梯度是写进去，而不是累加
 
-step 的时候 MXNet 需要给定批量大小
+>step 的时候 MXNet 需要给定批量大小
 
-需要调用 asscalar() 来将多维数组变成标量。
+>需要调用 asscalar() 来将多维数组变成标量。
 
-这个样例里 MXNet 比 PyTorch 快两倍。当然大家对待这样的比较要谨慎。
+>这个样例里 MXNet 比 PyTorch 快两倍。当然大家对待这样的比较要谨慎。
